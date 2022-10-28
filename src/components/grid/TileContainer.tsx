@@ -18,6 +18,7 @@ import {
   TimeTile,
   UvGraphTile,
   TwitterFeedTile,
+  PopularLinksTile,
 } from "@/components/tiles";
 import TodoListTile from "@/components/tiles/TodoListTile";
 import StravaGraphTile from "@/components/tiles/StravaGraphTile";
@@ -131,6 +132,11 @@ const TileContainer: React.FC<TileContainerProps> = ({ tileId, tileType }) => {
         </SpotifyContextProvider>
       );
       break;
+    case "Popular Links Tile":
+        tileToRender = (
+            <PopularLinksTile tileId={tileId} />
+        );
+        break;
     case "Large Spotify Tile":
       tileToRender = (
         <SpotifyContextProvider>
@@ -138,6 +144,13 @@ const TileContainer: React.FC<TileContainerProps> = ({ tileId, tileType }) => {
         </SpotifyContextProvider>
       );
       break;
+      case "Large Spotify Tile":
+        tileToRender = (
+          <SpotifyContextProvider>
+            <LargeSpotifyTile tileId={tileId} />
+          </SpotifyContextProvider>
+        );
+        break;
     case "Small Stock Tile":
       tileToRender = <SmallStockTile tileId={tileId} />;
       break;

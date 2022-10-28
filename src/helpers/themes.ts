@@ -76,6 +76,11 @@ export const defaultSettings: UserSettings = {
         textColor: "#222222",
         tileType: "Theme Picker",
       },
+      tile12: {
+        backgroundColor: "#65abc1",
+        textColor: "#222222",
+        tileType: "Popular Links Tile",
+      }
     },
     {
       themeName: "colored light",
@@ -149,6 +154,11 @@ export const defaultSettings: UserSettings = {
         textColor: "#ffffff",
         tileType: "Theme Picker",
       },
+      tile12: {
+        backgroundColor: "#65abc1",
+        textColor: "#222222",
+        tileType: "Popular Links Tile",
+      }
     },
     {
       themeName: "Wavy",
@@ -221,6 +231,11 @@ export const defaultSettings: UserSettings = {
         textColor: "#222222",
         tileType: "Theme Picker",
       },
+      tile12: {
+        backgroundColor: "#65abc1",
+        textColor: "#222222",
+        tileType: "Popular Links Tile",
+      }
     },
     {
       themeName: "Pink",
@@ -295,6 +310,11 @@ export const defaultSettings: UserSettings = {
         textColor: "#222222",
         tileType: "Theme Picker",
       },
+      tile12: {
+        backgroundColor: "#65abc1",
+        textColor: "#222222",
+        tileType: "Popular Links Tile",
+      }
     },
     {
       themeName: "light",
@@ -367,6 +387,11 @@ export const defaultSettings: UserSettings = {
         textColor: "#222222",
         tileType: "Theme Picker",
       },
+      tile12: {
+        backgroundColor: "#65abc1",
+        textColor: "#222222",
+        tileType: "Popular Links Tile",
+      }
     },
     {
       themeName: "dark",
@@ -440,6 +465,11 @@ export const defaultSettings: UserSettings = {
         textColor: "#E0E0E0",
         tileType: "Theme Picker",
       },
+      tile12: {
+        backgroundColor: "#65abc1",
+        textColor: "#222222",
+        tileType: "Popular Links Tile",
+      }
     },
     {
       themeName: "glassmorphism light",
@@ -514,6 +544,11 @@ export const defaultSettings: UserSettings = {
         textColor: "#222222",
         tileType: "Theme Picker",
       },
+      tile12: {
+        backgroundColor: "#65abc1",
+        textColor: "#222222",
+        tileType: "Popular Links Tile",
+      }
     },
     {
       themeName: "glassmorphism dark",
@@ -590,6 +625,11 @@ export const defaultSettings: UserSettings = {
         textColor: "#222222",
         tileType: "Theme Picker",
       },
+      tile12: {
+        backgroundColor: "#65abc1",
+        textColor: "#222222",
+        tileType: "Popular Links Tile",
+      }
     },
   ],
 };

@@ -46,6 +46,7 @@ export type TileType =
   | "Small Stock Tile"
   | "Large Stock Tile"
   | "Spotify Top Artist Tile"
+  | "Popular Links Tile"
   | "Blank Tile"
   | "None";
 
@@ -91,6 +92,7 @@ export type ThemeSettings = {
   tile9: TileSettings;
   tile10: TileSettings;
   tile11: TileSettings;
+  tile12: TileSettings;
 };
 
 export type UserSettings = {
@@ -113,4 +115,5 @@ export type TileId =
   | "tile9"
   | "tile10"
   | "tile11"
+  | "tile12"
   | "globalSettings";
