@@ -1,7 +1,7 @@
 import { FinnhubStockResponse, StockTickers } from "@/types/stocks";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const finnHubSecret = process.env.FINNHUB_SECRET;
+const finnHubSecret = 'cde39e2ad3i4an261qq0cde39e2ad3i4an261qqg';
 
 export default async function handler(
   req: NextApiRequest,
@@ -47,7 +47,7 @@ export const getStockTickerInfo = async (
           {
             method: "GET",
             headers: {
-              "X-Finnhub-Token": 'cde39e2ad3i4an261qq0cde39e2ad3i4an261qqg',
+              "X-Finnhub-Token": finnHubSecret
             },
           }
         );
