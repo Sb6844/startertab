@@ -3,6 +3,7 @@ import { LargeStockTickerSkeleton } from "@/components/skeletons/LargeStockTicke
 import { OutlinedButton } from "@/components/ui/OutlinedButton";
 import { TileId } from "@/types";
 import { FinnhubStockResponse, StockTickers } from "@/types/stocks";
+import { TriangleDownIcon, TriangleUpIcon } from "@chakra-ui/icons";
 import {
   Box,
   Center,
@@ -60,11 +61,16 @@ const StockDisplay: React.FC<StockDisplayProps> = ({ stockTicker }) => {
     );
   } else {
     textDisplay = (
-      <Box>
-        <Text color={stockTicker?.dp! > 0 ? "green" : "red.500"}>
+      <Flex>
+        <Box>
+        {stockTicker?.dp! > 0 ? <TriangleUpIcon></TriangleUpIcon> : <TriangleDownIcon></TriangleDownIcon>}
+        </Box>
+        <Box>
+        <Text color={stockTicker?.dp! > 0 ? "green" : "red.500"} fontWeight={stockTicker?.dp! > 0  ? "" : "bold"}>
           {stockTicker?.d} ({stockTicker?.dp}%)
         </Text>
-      </Box>
+        </Box>
+      </Flex>
     );
   }
 

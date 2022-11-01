@@ -17,7 +17,7 @@ export const TimeTile: React.FC<TimeProps> = ({ tileId }) => {
   const color = `var(--text-color-${tileId})`;
 
   const updateTime = () => {
-    setTime(new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"));
+    setTime(new Date().toLocaleTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"));
   };
 
   useEffect(() => {

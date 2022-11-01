@@ -97,6 +97,9 @@ export const TileTypePicker: React.FC<TileTypePickerProps> = ({
           <option style={optionsStyles} value="Popular Links Tile">
             Popular Links Tile
           </option>
+          <option style={optionsStyles} value="Search Bar">
+            Search Bar
+          </option>
         </>
       );
       break;
