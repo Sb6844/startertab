@@ -100,6 +100,9 @@ export const TileTypePicker: React.FC<TileTypePickerProps> = ({
           <option style={optionsStyles} value="Search Bar">
             Search Bar
           </option>
+          <option style={optionsStyles} value = "Calendar Events Tile">
+            Calendar Events
+          </option>
         </>
       );
       break;
@@ -129,6 +132,9 @@ export const TileTypePicker: React.FC<TileTypePickerProps> = ({
           </option>
           <option style={optionsStyles} value="Popular Links Tile">
             Popular Links Tile
+          </option>
+          <option style={optionsStyles} value = "Calendar Events Tile">
+            Calendar Events
           </option>
         </>
       );

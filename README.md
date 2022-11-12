@@ -10,7 +10,7 @@ I use [this](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdb
 
 ## Tech
 
-Local storage is used for storing your information, meaning you own your data! All of the settings, tokens and themes sit on your own browser. Some may call it laziness that I don't want to maintain a database, you could also see it as me helping prevent your data being in yet another cloud service. 
+Local storage is used for storing your information, meaning you own your data! All of the settings, tokens and themes sit on your own browser. Some may call it laziness that I don't want to maintain a database, you could also see it as me helping prevent your data being in yet another cloud service.
 
 Written in NextJS with CharkaUI. Hosted in Vercel.
 
@@ -34,6 +34,7 @@ Written in NextJS with CharkaUI. Hosted in Vercel.
 Fork the repo, clone it down and create a .env.local file in the root directory and populate the following keys:
 
 .env.local
+
 ```
 STRAVA_CLIENT_ID=<YOUR_SECRET_HERE>
 STRAVA_SECRET=<YOUR_SECRET_HERE>
@@ -55,7 +56,7 @@ yarn install && yarn dev
 
 ## Adding in a New Tile
 
-1) Create your new Tile component in the ```src/components/tiles``` folder. Make sure to accept a 'tileId' prop, this enables you to change the color of the text based off the settings changed in the sidebar.
+1. Create your new Tile component in the `src/components/tiles` folder. Make sure to accept a 'tileId' prop, this enables you to change the color of the text based off the settings changed in the sidebar.
 
 ```js
 type PageProps = {
@@ -69,7 +70,7 @@ export const YourNewTile: React.FC<PageProps> = ({ tileId }) => {
 }
 ```
 
-1) Add your tile type to the TileType in ```src/types/settings.ts```.
-2) Add your new option into the corresponding size in the switch statement for ```sizeOfTileForTypes``` in ```src/components/sidebar/TypePicker.tsx```
-3) Add your tile type to the switch statement for the ```tileType``` in ```src/components/TileContainer.tsx```
-4) If you want to add in persistent storage to the tile, use Recoil. Look at how another tile uses a FamilySelector and the useRecoilState hook
+1. Add your tile type to the TileType in `src/types/settings.ts`.
+2. Add your new option into the corresponding size in the switch statement for `sizeOfTileForTypes` in `src/components/sidebar/TypePicker.tsx`
+3. Add your tile type to the switch statement for the `tileType` in `src/components/TileContainer.tsx`
+4. If you want to add in persistent storage to the tile, use Recoil. Look at how another tile uses a FamilySelector and the useRecoilState hook

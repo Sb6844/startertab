@@ -48,6 +48,7 @@ export type TileType =
   | "Spotify Top Artist Tile"
   | "Popular Links Tile"
   | "Blank Tile"
+  | "Calendar Events Tile"
   | "None";
 
 export type TileSettings = {

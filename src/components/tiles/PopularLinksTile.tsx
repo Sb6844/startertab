@@ -1,6 +1,6 @@
 import { PopularLinksInfo, TileId } from "@/types";
 import {ViewIcon } from "@chakra-ui/icons";
-import { Box, Heading, Accordion, AccordionItem, AccordionButton, AccordionPanel, List, ListIcon, ListItem, Button, AccordionIcon } from "@chakra-ui/react";
+import { Box, Heading, Accordion, AccordionItem, AccordionButton, AccordionPanel, List, ListIcon, Button, AccordionIcon } from "@chakra-ui/react";
 import React from "react";
 
 interface PopularLinksTileProps {
@@ -8,8 +8,6 @@ interface PopularLinksTileProps {
 }
 
 export const PopularLinksTile: React.FC<PopularLinksTileProps> = ({ tileId }) => {
-
-
     const links: PopularLinksInfo[] = [
         {
             id: 1,
@@ -40,7 +38,6 @@ export const PopularLinksTile: React.FC<PopularLinksTileProps> = ({ tileId }) =>
             label: 'Finances'
         }
     ]
-
   const color = `var(--text-color-${tileId})`;
   return (
     <Box p="2" color={color} position="relative">

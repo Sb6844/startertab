@@ -35,6 +35,8 @@ import { QueryClient } from "@tanstack/react-query";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import TwitterContextProvider from "@/context/TwitterContext";
+import { CalendarEventTile } from "../tiles/CalendarEventsTile";
+import GoogleCalendarContextProvider from "@/context/GoogleCalendarContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -137,6 +139,13 @@ const TileContainer: React.FC<TileContainerProps> = ({ tileId, tileType }) => {
             <PopularLinksTile tileId={tileId} />
         );
         break;
+      case "Calendar Events Tile":
+      tileToRender = (
+        <GoogleCalendarContextProvider>
+            <CalendarEventTile tileId={tileId} />
+        </GoogleCalendarContextProvider>
+      );
+      break;
     case "Large Spotify Tile":
       tileToRender = (
         <SpotifyContextProvider>
