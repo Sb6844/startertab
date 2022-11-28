@@ -3,6 +3,7 @@ import { defaultSettings } from "@/helpers/themes";
 import {
   ChakraProvider,
   cookieStorageManager,
+  cookieStorageManagerSSR,
   extendTheme,
   localStorageManager,
 } from "@chakra-ui/react";
@@ -33,7 +34,7 @@ export function MyApp({
   // pulls the colorMode from the cookies so that SSR can produce the correct theme
   const colorModeManager =
     typeof cookies === "string"
-      ? cookieStorageManager(cookies)
+      ? cookieStorageManagerSSR(cookies)
       : localStorageManager;
 
   // setting defaults settings in local storage if the user is new

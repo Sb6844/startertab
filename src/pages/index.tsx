@@ -6,17 +6,20 @@ import {
 import SettingsSideBar from "@/components/sidebar/SettingsSidebar";
 import { Tutorial } from "@/components/tutorial/Tutorial";
 import { MobileWarning } from "@/components/ui/MobileWarning";
+import QuoteDisplayComponent from "@/components/ui/QuoteDisplay";
 import { SettingsToggle } from "@/components/ui/SettingsToggle";
 import { applyTheme, getCurrentTheme } from "@/helpers/settingsHelpers";
 import { TileId } from "@/types";
 import {
   Box,
+  Center,
   Flex,
   Link,
   Text,
   useColorMode,
   useDisclosure,
   useToast,
+  VStack,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { useCallback, useEffect, useState } from "react";
@@ -88,39 +91,38 @@ const Home: NextPage = () => {
   const settingsToggleColor = currentTheme.globalSettings.textColor;
   let toDisplay;
 
-  if (showingMobileWarning) {
-    toDisplay = <MobileWarning setIsMobileView={setIsMobileView} />;
-  } else {
     toDisplay = (
-      <Box width="100%" display="flex" height="100%">
-        {isOpen ? (
-          <SettingsSideBar
-            onClose={onClose}
-            isOpen={isOpen}
-            setOptionHovered={setOptionHovered}
-            setTutorialProgress={setTutorialProgress}
-            tutorialProgress={tutorialProgress}
-          />
-        ) : null}
-        <>
-          {showingTutorial ? (
-            <Tutorial
-              setShowingTutorial={setShowingTutorial}
-              tutorialProgress={tutorialProgress}
+      <>
+        <Box width="100%" display="flex" height="100%">
+          {isOpen ? (
+            <SettingsSideBar
+              onClose={onClose}
+              isOpen={isOpen}
+              setOptionHovered={setOptionHovered}
               setTutorialProgress={setTutorialProgress}
+              tutorialProgress={tutorialProgress}
             />
           ) : null}
-          <Flex width="100%" overflow="auto" height="100%">
-            <TileGrid
-              tutorialProgress={tutorialProgress}
-              optionHovered={optionHovered}
-              gridGap={gridGap}
-            />
-          </Flex>
-        </>
-      </Box>
+          <>
+            {showingTutorial ? (
+              <Tutorial
+                setShowingTutorial={setShowingTutorial}
+                tutorialProgress={tutorialProgress}
+                setTutorialProgress={setTutorialProgress}
+              />
+            ) : null}
+            <Flex width="100%" overflow="auto" height="100%" flexDirection={'column'}>
+             <QuoteDisplayComponent ></QuoteDisplayComponent>
+              <TileGrid
+                tutorialProgress={tutorialProgress}
+                optionHovered={optionHovered}
+                gridGap={gridGap}
+              />
+            </Flex>
+          </>
+        </Box>
+      </>
     );
-  }
 
   return (
     <>

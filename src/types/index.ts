@@ -10,3 +10,4 @@ export * from "./tiles";
 export * from "./twitter";
 export * from "./popularLinks";
 export * from "./googlecalendar";
+export * from "./quote";
